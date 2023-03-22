@@ -7,7 +7,7 @@ A decomplication of the official Dead Cells mod tools (v1.7.0)
   -  Original versions use v11.0.2
 
 ## Progress
-❌ AtlasTool<br>
+✅ AtlasTool<br>
 ✅ CDBTool<br>
 ✅ PAKTool<br>
 ❌ ScriptTool<br>
