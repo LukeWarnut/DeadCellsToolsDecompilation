@@ -23,3 +23,7 @@ Build/AtlasTool.exe.config
 *.CopyComplete
 AtlasTool/obj/x64/Release/AtlasTool.csproj.FileListAbsolute.txt
 AtlasTool/obj/x64/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+Build/ScriptTool.exe.config
+Build/options.json
+ScriptTool/obj/Release/ScriptTool.csproj.FileListAbsolute.txt
+ScriptTool/obj/Release/.NETFramework,Version=v4.8.AssemblyAttributes.cs
