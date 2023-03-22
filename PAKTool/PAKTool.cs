@@ -9,7 +9,6 @@ namespace PAKTool
 	internal class PAKTool
 	{
 		public byte version { get; private set; }
-
 		public DirectoryData root { get; private set; }
 
 		public void ExpandPAK(string _pakPath, string _destination)
@@ -18,6 +17,7 @@ namespace PAKTool
 			{
 				throw new FileNotFoundException("File not found: " + _pakPath, _pakPath);
 			}
+
 			DirectoryInfo directoryInfo = Directory.CreateDirectory(_destination);
 			BinaryReader binaryReader = this.ReadPAKHeader(_pakPath);
 			this.CreateTree(binaryReader, directoryInfo, this.root);
@@ -27,10 +27,12 @@ namespace PAKTool
 		public void BuildPAK(string _expandedPakPath, string _destination)
 		{
 			DirectoryInfo directoryInfo = new DirectoryInfo(_expandedPakPath);
+			
 			if (!directoryInfo.Exists)
 			{
 				throw new DirectoryNotFoundException("Directory " + _expandedPakPath + " not found");
 			}
+
 			FileInfo fileInfo = new FileInfo(_destination);
 			fileInfo.Directory.Create();
 			this.root = new DirectoryData(null, "");

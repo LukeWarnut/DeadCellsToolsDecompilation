@@ -9,26 +9,53 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAKTool", "PAKTool\PAKTool.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{22BF0DAB-4753-4023-85FE-540F6EC57680}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasTool", "AtlasTool\AtlasTool.csproj", "{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Debug|x64.Build.0 = Debug|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Release|x64.ActiveCfg = Release|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC5767F}.Release|x64.Build.0 = Release|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Debug|x64.Build.0 = Debug|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Release|x64.ActiveCfg = Release|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57681}.Release|x64.Build.0 = Release|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Debug|x64.Build.0 = Debug|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Release|x64.ActiveCfg = Release|Any CPU
+		{22BF0DAB-4753-4023-85FE-540F6EC57680}.Release|x64.Build.0 = Release|Any CPU
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Debug|Any CPU.Build.0 = Debug|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Debug|x64.ActiveCfg = Debug|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Debug|x64.Build.0 = Debug|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Release|Any CPU.ActiveCfg = Release|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Release|Any CPU.Build.0 = Release|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Release|x64.ActiveCfg = Release|x64
+		{CCD4945D-8A96-4B85-BE21-690CBAEB60F0}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9B4CA29-3536-41D6-BD22-88B284209480}
 	EndGlobalSection
 EndGlobal
