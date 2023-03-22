@@ -10,6 +10,6 @@ A decomplication of the official Dead Cells mod tools (v1.7.0)
 ✅ AtlasTool<br>
 ✅ CDBTool<br>
 ✅ PAKTool<br>
-❌ ScriptTool<br>
+✅ ScriptTool<br>
 ❌ TmxTool<br>
 ✅ Common.dll
