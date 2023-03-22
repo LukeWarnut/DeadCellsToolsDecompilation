@@ -8,10 +8,8 @@ using ModTools;
 
 namespace AtlasTool
 {
-	// Token: 0x0200000B RID: 11
 	internal class Program
 	{
-		// Token: 0x0600004C RID: 76 RVA: 0x00004700 File Offset: 0x00002900
 		private static void Main(string[] args)
 		{
 			Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
@@ -21,12 +19,15 @@ namespace AtlasTool
 			string text2 = "";
 			bool flag = true;
 			bool bBinary = true;
+
 			for (int i = 0; i < args.Length; i++)
 			{
 				string text3 = args[i];
+
 				if (text3[0] == '-' || text3[0] == '/')
 				{
 					text3 = text3.Substring(1).ToUpper();
+
 					if (text3 == "INDIR")
 					{
 						text3 = args[++i];
@@ -50,6 +51,7 @@ namespace AtlasTool
 					{
 						bBinary = false;
 					}
+
 					else
 					{
 						if (text3 == "?")
@@ -64,63 +66,77 @@ namespace AtlasTool
 							Console.WriteLine("-ascii : Export atlases as ascii (binary by default)");
 							return;
 						}
+
 						text2 = text3.ToUpper();
 					}
 				}
 			}
+
 			try
 			{
 				AtlasTool atlasTool = new AtlasTool();
 				Console.WriteLine("Launching AtlasTool v" + Versionning.currentVersion + ", action: " + text2);
+
 				if (text2 == "EXPAND")
 				{
 					atlasTool.Expand(text, outDir);
 				}
+
 				else if (text2 == "COLLAPSE")
 				{
 					atlasTool.Collapse(inDir, text, bBinary);
 				}
+
 				else if (text2 == "EXPANDALL")
 				{
 					DirectoryInfo directoryInfo = new DirectoryInfo(inDir);
 					List<Task> list = new List<Task>();
 					FileInfo[] files = directoryInfo.GetFiles("*.atlas");
+
 					for (int j = 0; j < files.Length; j++)
 					{
 						FileInfo atlas = files[j];
+
 						Task task = Task.Factory.StartNew(delegate
 						{
 							AtlasTool atlasTool2 = new AtlasTool();
 							string text4 = atlas.Name.Substring(0, atlas.Name.Length - 6);
 							atlasTool2.Expand(atlas.FullName, Path.Combine(outDir, text4));
 						});
+
 						list.Add(task);
 					}
 					Task.WaitAll(list.ToArray());
 				}
+
 				else
 				{
 					if (!(text2 == "COLLAPSEALL"))
 					{
 						throw new ArgumentException(string.Format("The action for \"{0}\" argument is not found, please refer to the doc", text2), "strAction");
 					}
+
 					DirectoryInfo directoryInfo2 = new DirectoryInfo(inDir);
 					List<Task> list2 = new List<Task>();
 					DirectoryInfo[] directories = directoryInfo2.GetDirectories();
+
 					for (int j = 0; j < directories.Length; j++)
 					{
 						DirectoryInfo dir = directories[j];
+
 						Task task2 = Task.Factory.StartNew(delegate
 						{
 							AtlasTool atlasTool3 = new AtlasTool();
 							string name = dir.Name;
 							atlasTool3.Collapse(Path.Combine(inDir, name), Path.Combine(outDir, name) + ".png", bBinary);
 						});
+
 						list2.Add(task2);
 					}
 					Task.WaitAll(list2.ToArray());
 				}
 			}
+
 			catch (Exception ex)
 			{
 				Error.Show(ex, flag);
