@@ -88,7 +88,7 @@
 			this.newToolStripMenuItem.Click += new global::System.EventHandler(this.newToolStripMenuItem_Click);
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             //this.openToolStripMenuItem.ShortcutKeys = (global::System.Windows.Forms.Keys)131151;
-            this.newToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O;
+            this.openToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O;
             this.openToolStripMenuItem.Size = new global::System.Drawing.Size(146, 22);
 			this.openToolStripMenuItem.Text = "Open";
 			this.openToolStripMenuItem.Click += new global::System.EventHandler(this.openToolStripMenuItem_Click);
