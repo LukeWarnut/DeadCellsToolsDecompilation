@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Common">
-      <HintPath>..\..\Dead Cells\steamapps\common\Dead Cells\ModTools\Common.dll</HintPath>
+      <HintPath>..\Build\Common.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
